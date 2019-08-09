@@ -1,0 +1,5 @@
+Dependencies for Project 'ananth11', Target 'Target 1': (DO NOT MODIFY !)
+F (.\LPC2400.s)(0x532C14EA)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\lpc2400.lst --xref -o .\lpc2400.o --depend .\lpc2400.d)
+F (.\delay.h)(0x59FC9A2C)()
+F (.\ananth11.c)(0x5A004FAB)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\ananth11.o --omf_browse .\ananth11.crf --depend .\ananth11.d)
+I (C:\Keil\ARM\Inc\Philips\lpc214x.h)(0x532C1500)

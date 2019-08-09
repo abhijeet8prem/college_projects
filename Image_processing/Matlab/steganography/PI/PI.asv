@@ -1,0 +1,57 @@
+% channel 1: green
+% channel 2: blue
+clc;
+clear;
+close all;
+% x1= ones(3,24);
+% x2=[x1 x1 x1];
+% x3=[x2
+%     x2
+%     x2];
+%cover=input('Enter the cover image');
+%cover=x3;
+%msg=input('Enter the secret message');
+msg=[1 0 1 1 0 1 1 0];
+img=imread('lenna.bmp');
+figure(4)
+imshow(img);
+%y=imread(msg);
+red=img(: , : ,1);  %red plane
+green=img(: , : ,2);  %green plane
+blue=img(: , : ,3);  %blue plane
+% figure(1)
+% imshow(red);
+% figure(2)
+% imshow(green);
+% figure(3)
+% imshow(blue);
+
+code=input('enter the code: ');
+
+% c=uisetcolor([1 0 0]);  %specifies red as default color selection;
+%redLSB= rem(red,2); // extracting 2 LSB bits of the indicator
+
+si=size(msg);
+loopLen= si/2;
+j=1;
+mask=252;
+for i=1:1  
+    if (code ==0)
+      % not hinding anything
+
+    elseif(code==1)
+    %No hidden data in green,2 bits of hidden data in blue
+    Mdec=msg(2*i-1)*2+msg(2*i)*1;
+    temp=bitand(blue(j,i),mask);
+    blue(j,i)=bitor(temp,Mdec);
+    blue(j,i)=blue(j,i)
+    
+    elseif(code==2)
+    %2 bits of hidden data in green 1
+
+
+    elseif(code==3)
+    %2 bits of hidden data in green and blue
+
+    end
+end
